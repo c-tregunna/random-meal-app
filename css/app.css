@@ -2,14 +2,21 @@
   Base Element Styles
 =========================================== */
 
+/*colors =====
+#2e223c
+#7a4ff0
+#00dcff
+#ffbb00
+*/
+
 * {
   box-sizing: border-box;
 }
 body {
-  background: #1e6cc5;
+  background: #2e223c;
   color: white;
   font-size: 16px;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   padding: 5% 5% 0;
 }
 main {
@@ -28,7 +35,7 @@ ul li {
 =========================================== */
 
 .headline {
-  font-family: 'Courgette', sans-serif;
+  font-family: "Courgette", sans-serif;
   font-size: 2.5em;
 }
 .tagline,
@@ -49,8 +56,8 @@ ul li {
   border: 4px solid;
   color: white;
   background: #1e6cc5;
-  font-size: .9em;
-  transition: background .5s, border-color .5s;
+  font-size: 0.9em;
+  transition: background 0.5s, border-color 0.5s;
 }
 .btn:hover {
   background: #418de4;
@@ -63,7 +70,7 @@ ul li {
 
 .slideUp {
   transform: translateY(-70px);
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
 .hidden {
   display: none;
