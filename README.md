@@ -32,7 +32,7 @@ Create a modal preview window that shows additional information for the meal, e.
 
 #### Gold Challenge
 
-Restructure your `meals` array to contain cheap dishes and fancy dishes. Using the newly structured array, you will show 6 cheap dishes and 1 fancy dish to complete the meal plan for the week. To do this, you will need to ammend your `getRandomWeeklyMealMeals()` function so that it can select 6 random cheap dishes and 1 random fancy dish and combine the 7 dishes together into a new array returned by the function. 
+Restructure your `meals` array to contain cheap dishes and fancy dishes. Using the newly structured array, you will show 6 cheap dishes and 1 fancy dish to complete the meal plan for the week. To do this, you will need to ammend your `getRandomWeeklyMealMeals()` function so that it can select 6 random cheap dishes and 1 random fancy dish and combine the 7 dishes together into a new array returned by the function.
 
 The *complete* folder contains an example of the completed project that you can compare with when you have finished to see the different solutions.
 

@@ -55,7 +55,7 @@ ul li {
   border-radius: 50px;
   border: 4px solid;
   color: white;
-  background: #1e6cc5;
+  background: #ffbb00;
   font-size: 0.9em;
   transition: background 0.5s, border-color 0.5s;
 }
