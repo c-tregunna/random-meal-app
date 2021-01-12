@@ -64,6 +64,14 @@ ul li {
   border-color: transparent;
 }
 
+.plan {
+  height: 60vh;
+  width: 50%;
+  margin: -50px auto;
+  border-radius: 10px;
+  background: red;
+}
+
 /* ========================================
   Helper Classes
 =========================================== */

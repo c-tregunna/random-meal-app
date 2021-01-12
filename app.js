@@ -6,18 +6,20 @@ const startButton = document.getElementById('startButton');
 const planDiv = document.querySelector('.plan');
 const mealList = document.getElementById('meals');
 // const customer = prompt('What is your name?');
-const name = 'Chef Claire'; // Assign your name
-const meals = [
-    ['Brushetta', 'Soup', 'Prawn Cocktail', 'Pate'],
-    ['Steak and Chips', 'Tomato and Mozeralla Pasta', 'Fish Pie'],
-    ['Jelly and Ice Cream', 'Eton Mess', 'Chocolate Fondant'],
-    ['Juice', 'Cola', 'Water'],
-];
-// const starter = ['Brushetta', 'Soup', 'Prawn Cocktail'];
-// const mainCourse = ['Steak and Chips', 'Tomato and Mozeralla Pasta', 'Fish Pie'];
-// const pudding =  ['Jelly and Ice Cream', 'Eton Mess', 'Chocolate Fondant']; // Add in some meals...
+
+// const meals = [
+//     ['Brushetta', 'Soup', 'Prawn Cocktail', 'Pate'],
+//     ['Steak and Chips', 'Tomato and Mozeralla Pasta', 'Fish Pie'],
+//     ['Jelly and Ice Cream', 'Eton Mess', 'Chocolate Fondant'],
+//     ['Juice', 'Cola', 'Water'],
+// ];
+const starters = ['Brushetta', 'Soup', 'Prawn Cocktail'];
+const mainCourse = ['Steak and Chips', 'Tomato and Mozeralla Pasta', 'Fish Pie'];
+const puddings =  ['Jelly and Ice Cream', 'Eton Mess', 'Chocolate Fondant']; // Add in some meals...
 
 // HELPER FUNCTIONS
+
+
 
 
 const getDay = () => {
@@ -37,17 +39,17 @@ const getDay = () => {
 
 
 const getRandomWeeklyMeals = () => {
-    // const randomStarter = Math.floor(Math.random() * starter.length);
-    // const randomMain = Math.floor(Math.random() * mainCourse.length);
-    // const randomPudding = Math.floor(Math.random() * pudding.length);
-    // console.log(starter[randomStarter]);
-    // console.log(mainCourse[randomMain]);
-    // console.log(pudding[randomPudding]);
-    meals.forEach(meal => {
-        const randomDishes = Math.floor(Math.random() * meal.length);
-        // .toString().slice(0, 3)
-        console.log(randomDishes);
-    })
+    let starter = starters[Math.floor(Math.random() * starters.length)];
+    console.log(starter);
+    let main = mainCourse[Math.floor(Math.random() * mainCourse.length)];
+    console.log(main);
+    let pudding = puddings[Math.floor(Math.random() * puddings.length)];
+    console.log(pudding);
+    // meals.forEach(meal => {
+    //     const randomDishes = Math.floor(Math.random() * meals.length);
+    //     // .toString().slice(0, 3)
+    //     console.log(randomDishes);
+    // })
 
 };
 
@@ -57,12 +59,20 @@ const displayWeeklyMealPlan = () => {
 
 };
 
-const showPlan = () => {};
+const showPlan = () => {
+    startButton.classList.add('hidden');
+    headline.classList.add('slideUp');
+    tagline.classList.add('slideUp');
+    planDiv.classList.remove('hidden');
+
+};
 
 headline.textContent = getDay();
-tagline.textContent = `Hey ${name}, click the button below to see your weekly meal planner, prepared by ${name}.`;
+// tagline.textContent = `Hey ${customer}, click the button below to see your weekly meal planner.`;
 
 // EVENT LISTENERS
 startButton.addEventListener('click', showPlan);
+
+
 
 
