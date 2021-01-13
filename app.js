@@ -5,7 +5,7 @@ const tagline = document.querySelector('.tagline');
 const startButton = document.getElementById('startButton');
 const planDiv = document.querySelector('.plan');
 const mealList = document.getElementById('meals');
-// const customer = prompt('What is your name?');
+const customer = prompt('What is your name?');
 
 // const meals = [
 //     ['Brushetta', 'Soup', 'Prawn Cocktail', 'Pate'],
@@ -40,39 +40,37 @@ const getDay = () => {
 
 const getRandomWeeklyMeals = () => {
     let starter = starters[Math.floor(Math.random() * starters.length)];
-    console.log(starter);
     let main = mainCourse[Math.floor(Math.random() * mainCourse.length)];
-    console.log(main);
     let pudding = puddings[Math.floor(Math.random() * puddings.length)];
-    console.log(pudding);
-    // meals.forEach(meal => {
-    //     const randomDishes = Math.floor(Math.random() * meals.length);
-    //     // .toString().slice(0, 3)
-    //     console.log(randomDishes);
-    // })
-
+    let randomDishes = [starter, main, pudding];
+    console.log(randomDishes);
+    return randomDishes;
 };
 
-getRandomWeeklyMeals();
 
-const displayWeeklyMealPlan = () => {
-
+const displayWeeklyMealPlan = (dishes) => {
+    dishes.forEach(dish => {
+        const li = document.createElement('li');
+        mealList.appendChild(li);
+        li.textContent = dish;
+    });
 };
+
+let randomMeal = getRandomWeeklyMeals();
+
 
 const showPlan = () => {
     startButton.classList.add('hidden');
     headline.classList.add('slideUp');
     tagline.classList.add('slideUp');
     planDiv.classList.remove('hidden');
-
+    displayWeeklyMealPlan(randomMeal);
 };
 
+// showPlan(randomMeal);
+
 headline.textContent = getDay();
-// tagline.textContent = `Hey ${customer}, click the button below to see your weekly meal planner.`;
+tagline.textContent = `Hey ${customer}, click the button below to see your weekly meal planner.`;
 
 // EVENT LISTENERS
 startButton.addEventListener('click', showPlan);
-
-
-
-
